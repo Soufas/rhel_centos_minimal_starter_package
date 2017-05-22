@@ -5,7 +5,7 @@ class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
 )
 {
   if ( $disable_nm == "yes" ) {    
-     file_line { 'bashrc_proxy':
+     file_line { 'ifcfg_configs':
                   ensure => present,
                   path   => '/etc/bashrc',
                   line   => 'export HTTP_PROXY=http://squid.puppetlabs.vm:3128',
