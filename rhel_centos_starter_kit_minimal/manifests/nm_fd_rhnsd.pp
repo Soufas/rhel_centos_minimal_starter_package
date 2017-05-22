@@ -5,16 +5,15 @@ class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
 )
 {
   if ( $disable_nm == "yes" ) {    
-      exec {'disable_nm_controlled':
-      command => "/usr/bin/sed -i '$ a NM_CONTROLLED=false' /etc/sysconfig/network-scripts/ifcfg-*"
-           }
-      exec {'mask_nm':
-          command => "/usr/bin/systemctl mask NetworkManager"
-            }
-    
+     file_line { 'bashrc_proxy':
+                  ensure => present,
+                  path   => '/etc/bashrc',
+                  line   => 'export HTTP_PROXY=http://squid.puppetlabs.vm:3128',
+                  match  => '^export\ HTTP_PROXY\=',
+                 }
+    service {'restart_network_service':
+            name => "network",
+            ensure => ""
+         }
    }
-   else{
-     
-     }
-   
 }
