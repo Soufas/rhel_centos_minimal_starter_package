@@ -3,6 +3,7 @@
 	<name>rhel_centos_starter_kit_minimal</name>
 	<comment></comment>
 	<projects>
+		<project>puppetlabs-stdlib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
