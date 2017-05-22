@@ -1,0 +1,3 @@
+# rhel_centos_starter_kit_minimal #
+
+This is the rhel_centos_starter_kit_minimal module. It provides...
