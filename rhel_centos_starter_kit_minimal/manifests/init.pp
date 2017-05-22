@@ -11,5 +11,5 @@
 # Sample Usage:
 #
 class rhel_centos_starter_kit_minimal {
-include packages
+include rhel_centos_starter_kit_minimal::packages
 }

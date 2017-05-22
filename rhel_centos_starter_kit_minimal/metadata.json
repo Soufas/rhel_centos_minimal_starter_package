@@ -1,13 +1,13 @@
 {
-  "author": "",
+  "author": "Seif Karoui",
   "dependencies": [],
-  "license": "",
-  "name": "seif-rhel_centos_starter_kit_minimal",
+  "license": "GPLv3",
+  "name": "soufas-rhel_centos_starter_kit_minimal",
   "operatingsystem_support": [],
   "project_page": "",
   "requirements": [],
-  "source": "",
-  "summary": "",
+  "source": "https://github.com/Soufas/rhel_centos_minimal_starter_package",
+  "summary": "Module to configure and install packages to minimal rhel installations",
   "tags": [],
-  "version": "0.1.0"
+  "version": "0.1.2"
 }
