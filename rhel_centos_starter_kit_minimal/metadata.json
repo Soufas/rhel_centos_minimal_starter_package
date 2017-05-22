@@ -9,5 +9,5 @@
   "source": "https://github.com/Soufas/rhel_centos_minimal_starter_package",
   "summary": "Module to configure and install packages to minimal rhel installations",
   "tags": [],
-  "version": "0.1.4"
+  "version": "0.1.5"
 }
