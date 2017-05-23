@@ -4,6 +4,6 @@ echo $IFCFG
 OCCURENCE=$(grep NM_CONTROLLED $IFCFG |wc -l)
 if [ OCCURENCE == 0 ];
 then
-cat 
+echo NM_CONTROLLED=false >> $IFCFG
 fi
 done
