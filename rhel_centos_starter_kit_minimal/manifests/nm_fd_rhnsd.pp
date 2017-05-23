@@ -5,15 +5,19 @@ class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
 )
 {
   if ( $disable_nm == "yes" ) {    
-     file_line { 'ifcfg_configs':
-                  ensure => present,
-                  path   => '/etc/bashrc',
-                  line   => 'export HTTP_PROXY=http://squid.puppetlabs.vm:3128',
-                  match  => '^export\ HTTP_PROXY\=',
-                 }
-    service {'restart_network_service':
-            name => "network",
-            ensure => ""
-         }
+     
+     file { '/tmp/disable_nm.sh':
+       ensure => file,
+       source => 'puppet:///modules/rhel_centos_starter_kit_minimal/nm_disable.sh',
+       mode => "u+x",
+       before => Exec['disable_nm']
+     }
+     exec { 'disable_nm':
+       command => "/tmp/disable_nm.sh",
+       before => Exec['restart_network_service']
+     }
+     exec{ 'restart_network_service':
+      command => 'service restart network'
+     }
    }
 }
