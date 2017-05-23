@@ -17,7 +17,7 @@ class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
        before => Exec['restart_network_service']
      }
      exec{ 'restart_network_service':
-      command => 'service restart network'
+      command => '/usr/sbin/service restart network'
      }
    }
 }
