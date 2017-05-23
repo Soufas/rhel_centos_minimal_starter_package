@@ -1,7 +1,7 @@
 class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
   $disable_nm = "yes",
-  $disable_firwalld = "yes",
-  $disable_rhnsd = "yes",
+  $disable_firwalld = "no",
+  $disable_rhnsd = "no",
 )
 {
   if ( $disable_nm == "yes" ) {    
@@ -17,7 +17,20 @@ class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
        before => Exec['restart_network_service']
      }
      exec{ 'restart_network_service':
-      command => '/usr/sbin/service restart network'
+      command => '/usr/sbin/service network restart'
+     }
+     service { 'NetworkManager':
+          enable => mask;
+     }
+   }
+   if ($disable_firwalld == "yes") {
+     service { 'firewalld':
+       enable => mask,
+     }
+   }
+   if ($disable_rhnsd == "no") {
+     service { 'rhnsd':
+       enable => mask,
      }
    }
 }
