@@ -11,7 +11,7 @@ gpgchek=0
     ensure => installed,
     require => File["/etc/yum.repos.d/centos_repo.repo"]
   }
-  file{ "/etc/yum.repos.d/centos_repo.repo":
+  file { "/etc/yum.repos.d/centos_repo.repo":
     ensure => present,
     content => $repo_content,
   }

@@ -16,11 +16,11 @@ class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
        command => '/tmp/disable_nm.sh',
        before => Exec['restart_network_service']
      }
-     exec{ 'restart_network_service':
-      command => '/usr/sbin/service network restart'
+     exec { 'restart_network_service':
+       command => '/usr/sbin/service network restart'
      }
      service { 'NetworkManager':
-          enable => mask;
+       enable => mask;
      }
    }
    if ($disable_firwalld == 'yes') {
