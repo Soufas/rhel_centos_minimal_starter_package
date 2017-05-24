@@ -30,7 +30,7 @@ exec { 'disable_nm':
 }
 exec { 'restart_network_service':
   command => '/usr/sbin/service network restart',
-  returns => [ "0", "1", ],
+  returns => [ '0', '1', ],
 }
 service { 'NetworkManager':
   enable => mask;
