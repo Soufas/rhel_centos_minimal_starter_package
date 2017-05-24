@@ -1,3 +1,15 @@
+# Class: nm_fd_rhnsd
+#
+# This class is for make some configurations to newly
+#minimal RHEL and Centos OS installations
+#
+# Parameters: none
+#
+# Actions:
+#
+# Requires: None
+#
+#
 class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
   $disable_nm = 'yes',
   $disable_firwalld = 'yes',

@@ -8,9 +8,9 @@
 #
 # Actions:
 #
-# Requires: see Modulefile
+# Requires: None
 #
-# Sample Usage:
+# Sample Usage: include rhel_centos_starter_kit_minimal
 #
 class rhel_centos_starter_kit_minimal {
 include rhel_centos_starter_kit_minimal::packages

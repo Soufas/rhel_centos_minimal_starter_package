@@ -1,3 +1,14 @@
+# Class: packages
+#
+# This class is for installing important packages on 
+#newly deployed RHEL and CentOS servers
+# Parameters: none
+#
+# Actions:
+#
+# Requires: None
+#
+#
 class rhel_centos_starter_kit_minimal::packages {
   $packages_list = [net-tools,vim-enhanced,nc,wireshark,tcpdump,wget,strace,lynx,sysstat,lsof,deltarpm,mlocate,bash-completion,nmap,telnet,lshw]
   $repo_content='
