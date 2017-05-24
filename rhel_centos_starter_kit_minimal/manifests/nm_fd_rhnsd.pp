@@ -1,7 +1,7 @@
 class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
   $disable_nm = "yes",
-  $disable_firwalld = "no",
-  $disable_rhnsd = "no",
+  $disable_firwalld = "yes",
+  $disable_rhnsd = "yes",
 )
 {
   if ( $disable_nm == "yes" ) {    
@@ -28,7 +28,7 @@ class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
        enable => mask,
      }
    }
-   if ($disable_rhnsd == "no") {
+   if ($disable_rhnsd == "yes") {
      service { 'rhnsd':
        enable => mask,
      }
