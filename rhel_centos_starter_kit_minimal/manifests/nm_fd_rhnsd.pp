@@ -5,7 +5,7 @@ class rhel_centos_starter_kit_minimal::nm_fd_rhnsd(
 )
 {
 if($disable_nm == 'yes'){
-  
+
 file { '/tmp/disable_nm.sh':
   ensure => file,
   source => 'puppet:///modules/rhel_centos_starter_kit_minimal/nm_disable.sh',
@@ -25,12 +25,12 @@ service { 'NetworkManager':
 }
 if ($disable_firwalld == 'yes') {
 service { 'firewalld':
- enable => mask,
+  enable => mask,
 }
 }
 if ($disable_rhnsd == 'yes') {
 service { 'rhnsd':
- enable => mask,
+  enable => mask,
 }
 }
 }

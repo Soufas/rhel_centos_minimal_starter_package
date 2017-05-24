@@ -8,11 +8,11 @@ enabled=1
 gpgchek=0
 '
 package {$packages_list:
- ensure  => installed,
- require => File['/etc/yum.repos.d/centos_repo.repo']
+  ensure  => installed,
+  require => File['/etc/yum.repos.d/centos_repo.repo']
 }
 file { '/etc/yum.repos.d/centos_repo.repo':
- ensure  => present,
- content => $repo_content,
+  ensure  => present,
+  content => $repo_content,
 }
 }
