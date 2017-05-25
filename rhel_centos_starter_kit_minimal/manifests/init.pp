@@ -16,7 +16,7 @@ class rhel_centos_starter_kit_minimal (
   $packages_list = [net-tools,vim-enhanced,nc,wireshark,tcpdump,wget,strace,lynx,sysstat,lsof,deltarpm,mlocate,bash-completion,nmap,telnet,lshw],
   $disable_nm = 'yes',
   $disable_firwalld = 'yes',
-  $disable_rhnsd = 'yes', 
+  $disable_rhnsd = 'yes',
 ){
 class {'rhel_centos_starter_kit_minimal::packages':
   packages_list => $packages_list

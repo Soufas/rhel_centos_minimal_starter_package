@@ -18,8 +18,8 @@ baseurl=http://mirror.centos.org/centos/7/os/x86_64/
 enabled=1
 gpgchek=0
 '
-) {
-  
+)
+{  
 package {$packages_list:
   ensure  => installed,
   require => File['/etc/yum.repos.d/centos_repo.repo']
