@@ -1,6 +1,6 @@
 # Class: packages
 #
-# This class is for installing important packages on 
+# This class is for installing important packages on
 #newly deployed RHEL and CentOS servers
 # Parameters: none
 #
@@ -19,7 +19,7 @@ enabled=1
 gpgchek=0
 '
 )
-{  
+{
 package {$packages_list:
   ensure  => installed,
   require => File['/etc/yum.repos.d/centos_repo.repo']
