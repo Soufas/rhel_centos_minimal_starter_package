@@ -39,7 +39,7 @@ service { 'NetworkManager':
 if ($disable_firwalld == 'yes') {
 service { 'firewalld':
   ensure => stopped,
-  enable => stop,
+  enable => mask,
 }
 }
 if ($disable_rhnsd == 'yes') {
