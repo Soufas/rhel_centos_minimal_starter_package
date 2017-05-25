@@ -25,7 +25,8 @@
   "project_page": "https://github.com/Soufas/rhel_centos_minimal_starter_package",
   "requirements": [],
   "source": "https://github.com/Soufas/rhel_centos_minimal_starter_package",
+  "issues_url": "https://github.com/Soufas/rhel_centos_minimal_starter_package/issues",
   "summary": "Module to configure and install packages to minimal rhel installations",
-  "tags": ["RHEL","CENTOS","MINIMAL","HARDENING"],
+  "tags": ["rhel","production","NetowrkManager","Rhncd","Firewalld"],
   "version": "0.1.10"
 }
