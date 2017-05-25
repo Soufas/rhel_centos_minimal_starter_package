@@ -27,5 +27,5 @@
   "source": "https://github.com/Soufas/rhel_centos_minimal_starter_package",
   "summary": "Module to configure and install packages to minimal rhel installations",
   "tags": ["RHEL","CENTOS","MINIMAL","HARDENING"],
-  "version": "0.1.8"
+  "version": "0.1.10"
 }
