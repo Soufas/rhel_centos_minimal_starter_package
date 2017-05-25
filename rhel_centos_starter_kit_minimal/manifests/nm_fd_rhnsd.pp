@@ -38,11 +38,13 @@ service { 'NetworkManager':
 }
 if ($disable_firwalld == 'yes') {
 service { 'firewalld':
-  enable => mask,
+  ensure => stopped,
+  enable => stop,
 }
 }
 if ($disable_rhnsd == 'yes') {
 service { 'rhnsd':
+  ensure => stopped,
   enable => mask,
 }
 }
