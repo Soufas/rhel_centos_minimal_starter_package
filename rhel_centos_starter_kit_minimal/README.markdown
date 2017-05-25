@@ -4,9 +4,9 @@
 #### Table of Contents
 
 1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Usage - Configuration options and additional functionality](#usage)
-4. [Limitations - OS compatibility, etc.](#limitations)
+2. [Module Description](#module-description)
+3. [Usage](#usage)
+4. [Limitations](#limitations)
 
 ## Overview
 
@@ -51,7 +51,7 @@ Variables description used when declaring:
 * disable_firwalld  : if set to yes , Firewalld service will disabled and masked. If not set , default is yes
 * disable_rhnsd     : if set to yes , Rhnsd service will disabled and masked. If not set , default is yes
 }
-```
+
 
 ## Limitations
 
